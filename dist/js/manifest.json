@@ -71,6 +71,14 @@
                         "master",
                         "advertise"
                     ]
+                },
+                {
+                    "pattern": "history",
+                    "name": "history",
+                    "target": [
+                        "master",
+                        "history"
+                    ]
                 }
             ],
             "targets": {
@@ -88,6 +96,11 @@
                 "advertise": {
                     "viewName": "Advertise",
                     "viewId": "advertise",
+                    "viewLevel": 2
+                },
+                "history": {
+                    "viewName": "History",
+                    "viewId": "history",
                     "viewLevel": 2
                 }
             }

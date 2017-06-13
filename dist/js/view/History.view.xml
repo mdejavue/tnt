@@ -1,0 +1,29 @@
+<mvc:View
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:f="sap.ui.layout.form"
+   controllerName="de.javue.tnt.controller.History">   
+    <Page title="{i18n>PAGE_TITLE}" enableScrolling="false">
+        <VBox justifyContent="SpaceBetween" fitContainer="true">
+            <VBox>
+                <f:SimpleForm>
+                <Label text="{i18n>TRANSACTION_HISTORY}"/>
+                <List items="{
+                    path: 'history>/TntContract/Transactions',
+                    sorter: [{
+                        path: 'time',
+                        descending: true
+                    }]
+                }">
+                    <StandardListItem title="{history>hash}" description="{history>input}"/>
+                </List>
+            </f:SimpleForm>
+            </VBox>
+
+            <f:SimpleForm>
+                <Label text="{i18n>YOUR_WALLET}"/>
+                <Text text="{wallet>/MainAccount}"/>
+            </f:SimpleForm>
+        </VBox>
+    </Page>
+</mvc:View>

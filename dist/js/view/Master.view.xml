@@ -8,7 +8,7 @@
             <items>
                 <StandardListItem title="{i18n>MENU_BUMP}" data:navTarget="bump" type="Navigation" press=".menuNavTo"/>
                 <StandardListItem title="{i18n>MENU_ADVERTISE}" data:navTarget="advertise" type="Navigation" press=".menuNavTo"/>
-                <StandardListItem title="{i18n>MENU_CLAIM}" data:navTarget="claim" type="Navigation" press=".menuNavTo"/>
+                <StandardListItem title="{i18n>MENU_HISTORY}" data:navTarget="history" type="Navigation" press=".menuNavTo"/>
             </items>
         </List>
     </Page>
