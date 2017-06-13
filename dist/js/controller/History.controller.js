@@ -10,6 +10,10 @@ sap.ui.define([
         onInit: function () {
             this.setModel(WalletViewModelProvider.getModel(), "wallet");
             this.setModel(HistoryViewModelProvider.getModel(), "history");
+        },
+        
+        toAscii: function(sValue) {
+            return web3.toAscii(sValue);
         }
     });
 });

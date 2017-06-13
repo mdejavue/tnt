@@ -15,7 +15,7 @@
                         descending: true
                     }]
                 }">
-                    <StandardListItem title="{history>hash}" description="{history>input}"/>
+                    <StandardListItem title="{history>hash}" description="{path: 'history>input', formatter: '.toAscii'}"/>
                 </List>
             </f:SimpleForm>
             </VBox>

@@ -34,7 +34,7 @@ sap.ui.define([
                         // CHECK IF TX IS FLAT -> getTransaction()
 
                         block.transactions.forEach(function (e) {
-                            if (myaccount == "*" || myaccount == e.from || myaccount == e.to) {
+                            if (true) {//myaccount == "*" || myaccount == e.from || myaccount == e.to) {
                                 aEntries.push(e);
                             }
                         });
