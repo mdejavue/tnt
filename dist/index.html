@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+
+		<script src="js/app.js"></script>
+		<script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+			id="sap-ui-bootstrap" data-sap-ui-libs="sap.m"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-resourceroots='{"de.javue.tnt": "./js"}'
+			data-sap-ui-preload="async">
+		</script>
+
+		<script>
+			sap.ui.getCore().attachInit(function () {
+				sap.ui.require([
+					"sap/ui/core/Component",
+					"sap/ui/core/ComponentContainer"
+				], function (Component, ComponentContainer) {
+					sap.ui.component({
+						name: "de.javue.tnt",
+						async: true
+					}).then(function (oComponent) {
+						new ComponentContainer({
+							component: oComponent
+						}).placeAt("content");
+					});
+				});
+			});
+		</script>
+	</head>
+	<body id="content" class="sapUiBody">
+	</body>
+</html>

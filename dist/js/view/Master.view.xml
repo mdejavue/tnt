@@ -1,0 +1,15 @@
+<mvc:View
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+   controllerName="de.javue.tnt.controller.Master">  
+    <Page>
+        <List>
+            <items>
+                <StandardListItem title="{i18n>MENU_BUMP}" data:navTarget="bump" type="Navigation" press=".menuNavTo"/>
+                <StandardListItem title="{i18n>MENU_ADVERTISE}" data:navTarget="advertise" type="Navigation" press=".menuNavTo"/>
+                <StandardListItem title="{i18n>MENU_CLAIM}" data:navTarget="claim" type="Navigation" press=".menuNavTo"/>
+            </items>
+        </List>
+    </Page>
+</mvc:View>

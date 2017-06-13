@@ -1,0 +1,96 @@
+{
+    "_version": "1.1.0",
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "sap.ui.demo.wt",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{APP_TITLE}}",
+        "description": "{{APP_DESCRIPTION}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "_version": "1.1.0",
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "rootView": "de.javue.tnt.view.App",
+        "dependencies": {
+            "minUI5Version": "1.44",
+            "libs": {
+                "sap.m": {}
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "de.javue.tnt.i18n.i18n"
+                }
+            }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "de.javue.tnt.view",
+                "controlId": "idApp",
+                "controlAggregation": "detailPages",
+                "bypassed": {
+                    "target": [
+                        "master",
+                        "bump"
+                    ]
+                },
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "bump",
+                    "name": "bump",
+                    "target": [
+                        "master",
+                        "bump"
+                    ]
+                },
+                {
+                    "pattern": "advertise",
+                    "name": "advertise",
+                    "target": [
+                        "master",
+                        "advertise"
+                    ]
+                }
+            ],
+            "targets": {
+                "master": {
+                    "viewName": "Master",
+                    "viewLevel": 1,
+                    "viewId": "master",
+                    "controlAggregation": "masterPages"
+                },
+                "bump": {
+                    "viewName": "Bump",
+                    "viewId": "bump",
+                    "viewLevel": 2
+                },
+                "advertise": {
+                    "viewName": "Advertise",
+                    "viewId": "advertise",
+                    "viewLevel": 2
+                }
+            }
+        }
+    }
+}
