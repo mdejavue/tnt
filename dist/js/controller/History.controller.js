@@ -12,8 +12,8 @@ sap.ui.define([
             this.setModel(HistoryViewModelProvider.getModel(), "history");
         },
         
-        toAscii: function(sValue) {
-            return web3.toAscii(sValue);
+        toWei: function(sValue) {
+            web3.toWei(sValue);
         }
     });
 });
