@@ -57,7 +57,7 @@ sap.ui.define([
             },
         }).setDefaultBindingMode("OneWay");
         var accountInterval = setInterval(function () {
-            getTransactionsByAccount("0x86e386ca0c1bdd27e62f75081a1b85fee11f2ba8").then(function(aEntries) {
+            getTransactionsByAccount(TntContract.address).then(function(aEntries) {
                 aEntries.forEach(function(e) {
                     var decoded = abiDecoder.decodeMethod(e.input);
                     e.decoded = decoded;
