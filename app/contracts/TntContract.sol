@@ -4,11 +4,8 @@ pragma solidity ^0.4.7;
 
 contract TntContract {
 
-	uint constant SERNO_START = 1000;
-	uint currentSerno = SERNO_START;
-
 	struct SerItem {
-		uint serno;
+		string serno;
 		Status status;
 		Disposition disposition;
 		address bup;
@@ -17,9 +14,9 @@ contract TntContract {
 	enum Status { Inactive, Active, Deleted }
 	enum Disposition { Created, Commissioned, Shipping, Received, Sold, Destroyed }
 
-	mapping (uint => SerItem) repository;
+	mapping (string => SerItem) repository;
 
-	function requestInfo(uint serno) returns (Status status, Disposition disposition) {
+	function requestInfo(string serno) constant returns (Status status, Disposition disposition) {
 		SerItem serItem = repository[serno];
 		if (serItem.bup != msg.sender) {
 			throw;
@@ -28,12 +25,12 @@ contract TntContract {
 		disposition = serItem.disposition;
 	}
 
-	function produce() returns (uint serno) {
-		serno = currentSerno++;
+	function produce(string serno) {
+		if ( (bytes(repository[serno].serno)).length > 0) throw;
 		repository[serno] = SerItem(serno, Status.Active, Disposition.Created, msg.sender);
 	}
 
-	function commission(uint serno) returns (bool success) {
+	function commission(string serno) {
 		SerItem serItem = repository[serno];
 		if (serItem.bup != msg.sender 
 			|| serItem.status != Status.Active
@@ -41,6 +38,5 @@ contract TntContract {
 			throw;
 		}
 		serItem.disposition = Disposition.Commissioned;
-		success = true;
 	}
 }

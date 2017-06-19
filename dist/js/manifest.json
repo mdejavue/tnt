@@ -50,26 +50,26 @@
                 "bypassed": {
                     "target": [
                         "master",
-                        "bump"
+                        "produce"
                     ]
                 },
                 "async": true
             },
             "routes": [
                 {
-                    "pattern": "bump",
-                    "name": "bump",
+                    "pattern": "produce",
+                    "name": "produce",
                     "target": [
                         "master",
-                        "bump"
+                        "produce"
                     ]
                 },
                 {
-                    "pattern": "advertise",
-                    "name": "advertise",
+                    "pattern": "setdispo",
+                    "name": "setdispo",
                     "target": [
                         "master",
-                        "advertise"
+                        "setdispo"
                     ]
                 },
                 {
@@ -88,14 +88,14 @@
                     "viewId": "master",
                     "controlAggregation": "masterPages"
                 },
-                "bump": {
-                    "viewName": "Bump",
-                    "viewId": "bump",
+                "produce": {
+                    "viewName": "Produce",
+                    "viewId": "produce",
                     "viewLevel": 2
                 },
-                "advertise": {
-                    "viewName": "Advertise",
-                    "viewId": "advertise",
+                "setdispo": {
+                    "viewName": "SetDispo",
+                    "viewId": "setdispo",
                     "viewLevel": 2
                 },
                 "history": {

@@ -6,9 +6,9 @@
     <Page>
         <List>
             <items>
-                <StandardListItem title="{i18n>MENU_BUMP}" data:navTarget="bump" type="Navigation" press=".menuNavTo"/>
-                <StandardListItem title="{i18n>MENU_ADVERTISE}" data:navTarget="advertise" type="Navigation" press=".menuNavTo"/>
-                <StandardListItem title="{i18n>MENU_HISTORY}" data:navTarget="history" type="Navigation" press=".menuNavTo"/>
+                <StandardListItem title="Produce Units" data:navTarget="produce" type="Navigation" press=".menuNavTo"/>
+                <StandardListItem title="Set Disposition" data:navTarget="setdispo" type="Navigation" press=".menuNavTo"/>
+                <StandardListItem title="Audit Blockchain" data:navTarget="history" type="Navigation" press=".menuNavTo"/>
             </items>
         </List>
     </Page>

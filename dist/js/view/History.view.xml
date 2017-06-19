@@ -3,11 +3,11 @@
    xmlns:mvc="sap.ui.core.mvc"
    xmlns:f="sap.ui.layout.form"
    controllerName="de.javue.tnt.controller.History">   
-    <Page title="{i18n>PAGE_TITLE}" enableScrolling="false">
+    <Page title="Explore Transactions" enableScrolling="false">
         <VBox justifyContent="SpaceBetween" fitContainer="true">
             <VBox>
                 <f:SimpleForm>
-                <Label text="{i18n>TRANSACTION_HISTORY}"/>
+                <Label text="Transactions"/>
                 <List items="{
                     path: 'history>/TntContract/Transactions',
                     sorter: [{
@@ -19,11 +19,6 @@
                 </List>
             </f:SimpleForm>
             </VBox>
-
-            <f:SimpleForm>
-                <Label text="{i18n>YOUR_WALLET}"/>
-                <Text text="{wallet>/MainAccount}"/>
-            </f:SimpleForm>
         </VBox>
     </Page>
 </mvc:View>
