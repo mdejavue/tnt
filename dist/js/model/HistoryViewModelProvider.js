@@ -14,8 +14,8 @@ sap.ui.define([
                     });
                 });
             }).then(function (endBlockNo) {
-                endBlockNumber = 1000;
-                startBlockNumber = endBlockNumber - 1000;
+                endBlockNumber = 20;
+                startBlockNumber = endBlockNumber - 20;
                 var aPromises = [];
                 for (var i = startBlockNumber; i <= endBlockNumber; i++) {
                     aPromises.push(new Promise(function (resolve, reject) {

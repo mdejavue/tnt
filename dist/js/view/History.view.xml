@@ -7,17 +7,24 @@
         <VBox justifyContent="SpaceBetween" fitContainer="true">
             <VBox>
                 <f:SimpleForm>
-                <Label text="Transactions"/>
-                <List items="{
-                    path: 'history>/TntContract/Transactions',
-                    sorter: [{
-                        path: 'time',
-                        descending: true
-                    }]
-                }">
-                    <StandardListItem title="{history>decoded/name}" description="{history>decoded/params/0/value}"/>
-                </List>
-            </f:SimpleForm>
+                    <Label text="Serial Number"/>
+                    <Input id="input"/>
+                    <Button text="Get Info" press=".onGetInfoPressed"/>
+                    <Label text="Info"/>
+                    <TextArea id="info"/>
+                </f:SimpleForm>
+                <f:SimpleForm>
+                    <Label text="All Transactions"/>
+                    <List items="{
+                        path: 'history>/TntContract/Transactions',
+                        sorter: [{
+                            path: 'time',
+                            descending: true
+                        }]
+                    }">
+                        <StandardListItem title="{history>decoded/name}" description="{history>decoded/params/0/value}"/>
+                    </List>
+                </f:SimpleForm>
             </VBox>
         </VBox>
     </Page>

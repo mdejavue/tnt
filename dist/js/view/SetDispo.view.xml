@@ -10,9 +10,14 @@
                 <Label text="Serial Number"/>  
                 <Input id="input" value=""/>
                 <Label text="Disposition"/> 
-                <Select forceSelection="false">  
+                <Select id="select" forceSelection="false">  
                     <core:Item key="commission" text="Commissioned"/>
+                    <core:Item key="ship" text="Ship"/>
+                    <core:Item key="received" text="Received"/>
+                    <core:Item key="destroy" text="Destroy"/>
                 </Select> 
+                <Label text="Ship to"/>  
+                <Input id="shipto" placeholder="In case of Ship put receiver address here." value=""/>
                 <Button text="Set" press=".onSetPressed"/>
                 <Label text="Log"/>
                 <TextArea id="log" value=""/>
